@@ -85,7 +85,7 @@ def main():
 
     from PIL import Image
 
-    im = Image.open('spotify_search_engine-main/images/download (1).jpg')
+    im = Image.open('images/download (1).jpg')
 
     st.set_page_config(page_title="Spotify Search Engine", page_icon=im, layout="wide")
 
@@ -100,8 +100,8 @@ def main():
     st.title("🔍 Spotify Search Engine")
     st.markdown("This is a Spotify Search Engine that allows you to filter and explore songs based on different criteria which are explained at the end of the page.")
 
-    file1_path = "spotify_search_engine-main/data/half1.csv"
-    file2_path = "spotify_search_engine-main/data/half2.csv"
+    file1_path = "data/half1.csv"
+    file2_path = "data/half2.csv"
 
     # Read the two CSV files into DataFrames
     df1 = pd.read_csv(file1_path)
@@ -142,7 +142,7 @@ def main():
     st.markdown("- **Tempo**: The overall estimated tempo of a track in beats per minute (BPM).")
 
     footer_container = st.container()
-    footer_container.image("spotify_search_engine-main/images/download (2).jpg", use_column_width=True)
+    footer_container.image("images/download (2).jpg", use_column_width=True)
     st.markdown("###### Note: The data used was last updated on 21/05/2023 and was gathered using spotipy.", unsafe_allow_html=True)
     st.markdown("If you would like to keep using this tool please consider supporting the project.", unsafe_allow_html=True)
     render_paypal_donate_button()
